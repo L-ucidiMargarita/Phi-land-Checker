@@ -1,7 +1,7 @@
 # Phi-land-Checker
 Phi land Checker
 
-# By [Cryptoromb](t.me/cryptoromb)
+# By [Cryptoromb](https://t.me/cryptoromb)
 
 ## Что умеет
 Показывает XP на акке, клеймит доступные награды, активирует акк (если ранее был не подключен к сайту), 
