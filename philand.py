@@ -1,3 +1,4 @@
+
 import json
 from web3 import Web3
 import requests
@@ -26,8 +27,8 @@ phi_contract = web3.eth.contract(phi_address, abi=ABI)
 def Check(user_address):
 
     #Активация аккаунта
-    r = requests.post('https://utils-api.phi.blue/v1/philand/action',json =  {"address":user_address,"type":"LOGIN"},)
-    time.sleep(3)
+    #r = requests.post('https://utils-api.phi.blue/v1/philand/action',json =  {"address":user_address,"type":"LOGIN"},)
+    #time.sleep(3)
 
     #Замена кнопки Check eligible
     r = requests.post('https://utils-api.phi.blue/v1/philand/campaign/check?address='+user_address,
@@ -67,10 +68,11 @@ def ForTX(user_address,avaibleTask):
     return forTX
 
 def mint(privatekey,user_address):
-    try:
 
-        avaibleTasks = Check(user_address)
-        for task in avaibleTasks:
+
+    avaibleTasks = Check(user_address)
+    for task in avaibleTasks:
+        try:
             task = task[0]
             forTX = ForTX(user_address,task)
             tx = {
@@ -102,8 +104,9 @@ def mint(privatekey,user_address):
             print(f'\n== Hash : {txn_hash} ')
 
             time.sleep(random.randint(10, 20))
-    except Exception as e:
-        print(e)
+        
+        except Exception as e:
+            print(e)
 
 
 
