@@ -13,3 +13,4 @@ Phi land Checker
 
 Лучше прогнать скрипт пару раз, т.к после клейма некоторых заданий открываются новые + не всегда идеально проходит клейм заданий
 
+Если есть вопросы, [читайте это](https://docs.google.com/document/d/1qbieS7YQSVl52R-DSW4f6EXxjZRnxO3Q_RhlTrGzlO8/edit)
