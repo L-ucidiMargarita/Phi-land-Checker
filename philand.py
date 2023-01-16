@@ -17,7 +17,6 @@ ABI = json.loads(
  )
 CONCTRACT = '0x754e78bC0f7B487D304552810A5254497084970C'
 
-#Адрес инвест пула
 CONCTRACT2 = '0x3D8C06e65ebf06A9d40F313a35353be06BD46038'
 
 
@@ -27,8 +26,8 @@ phi_contract = web3.eth.contract(phi_address, abi=ABI)
 def Check(user_address):
 
     #Активация аккаунта
-    #r = requests.post('https://utils-api.phi.blue/v1/philand/action',json =  {"address":user_address,"type":"LOGIN"},)
-    #time.sleep(3)
+    r = requests.post('https://utils-api.phi.blue/v1/philand/action',json =  {"address":user_address,"type":"LOGIN"},)
+    time.sleep(3)
 
     #Замена кнопки Check eligible
     r = requests.post('https://utils-api.phi.blue/v1/philand/campaign/check?address='+user_address,
